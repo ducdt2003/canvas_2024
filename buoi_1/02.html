@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ Hình Chữ Nhật Chia Đôi</title>
+</head>
+<body>
+    <!-- Phần tử canvas -->
+    <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000;">
+        Trình duyệt của bạn không hỗ trợ canvas.
+    </canvas>
+
+    <!-- JavaScript để vẽ lên canvas -->
+    <script>
+        // Lấy đối tượng canvas và ngữ cảnh vẽ 2D
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Vẽ phần bên trái màu đỏ
+        ctx.fillStyle = "#FF0000";  // Đặt màu tô là đỏ
+        ctx.fillRect(50, 50, 100, 100);  // Vẽ phần bên trái màu đỏ (chiều rộng 100px)
+
+        // Vẽ phần bên phải màu xanh
+        ctx.fillStyle = "#00FF00";  // Đặt màu tô là xanh
+        ctx.fillRect(150, 50, 100, 100);  // Vẽ phần bên phải màu xanh (chiều rộng 100px)
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ Hình Chữ Nhật Trên Canvas</title>
+    <style>
+        /* Cài đặt body để sử dụng Flexbox */
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao màn hình */
+            margin: 0; /* Loại bỏ khoảng cách mặc định của body */
+            background-color: #f0f0f0; /* Màu nền cho trang */
+        }
+
+        canvas {
+            border: 3px solid #000; /* Đường viền canvas */
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần tử canvas -->
+    <canvas id="myCanvas" width="300" height="200">
+        Trình duyệt của bạn không hỗ trợ canvas.
+    </canvas>
+
+    <!-- JavaScript để vẽ lên canvas -->
+    <script>
+        // Lấy đối tượng canvas và ngữ cảnh vẽ 2D
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Vẽ hình chữ nhật màu đỏ
+        ctx.fillStyle = "#FF0000";           // Đặt màu tô là đỏ
+        ctx.fillRect(50, 50, 200, 100);      // Vẽ hình chữ nhật tại tọa độ (50, 50) với kích thước 200x100
+    </script>
+</body>
+</html>

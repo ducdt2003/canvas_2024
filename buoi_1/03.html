@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ Hình Tam Giác Vuông Trên Canvas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần tử canvas -->
+    <canvas id="myCanvas" width="300" height="200">
+        Trình duyệt của bạn không hỗ trợ canvas.
+    </canvas>
+
+    <!-- JavaScript để vẽ lên canvas -->
+    <script>
+        // Lấy đối tượng canvas và ngữ cảnh vẽ 2D
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Đặt màu tô cho hình tam giác
+        ctx.fillStyle = "#FF0000";  // Màu đỏ
+
+        // Bắt đầu vẽ hình tam giác vuông
+        ctx.beginPath();
+        ctx.moveTo(50, 50);        // Di chuyển đến điểm (50, 50), điểm gốc của tam giác
+        ctx.lineTo(50, 150);       // Vẽ từ (50, 50) xuống (50, 150) (cạnh đứng)
+        ctx.lineTo(250, 150);      // Vẽ từ (50, 150) sang (250, 150) (cạnh đáy)
+        ctx.closePath();           // Đóng lại hình tam giác vuông
+
+        // Tô màu hình tam giác
+        ctx.fill();                // Tô màu bên trong tam giác
+    </script>
+</body>
+</html>
